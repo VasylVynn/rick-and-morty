@@ -51,7 +51,7 @@ function Characters() {
        
         <Grid  sx={{pr:'10px'}} container item md={9} spacing={2} justifyContent="center"
   alignItems="center">
-          <Cards page="/" results={results} />
+          <Cards page="/home" results={results} />
         </Grid>
         
         <Grid item md={12}>

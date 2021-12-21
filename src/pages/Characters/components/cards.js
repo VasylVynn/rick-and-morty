@@ -40,7 +40,7 @@ function Cards({results, page}) {
                             </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button component={Link} to = {`${page}${id}`} size="small" color="primary">
+                                <Button component={Link} to = {`${page}/${id}`} size="small" color="primary">
                                 More info
                                 </Button>
                             </CardActions>

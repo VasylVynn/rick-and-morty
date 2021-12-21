@@ -30,10 +30,21 @@ const Header = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
+          component={Link} to = {'/home'}
             variant="h5"
             noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            //sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, color: '#FFFFFF',  }}
+
+            sx={[
+              {
+                '&:hover': {
+                  color: 'white',
+                },
+                
+              },
+              { mr: 2, display: { xs: 'none', md: 'flex' }, color: '#FFFFFF'},
+             
+            ]}
           >
             Rick & Morty 
           </Typography>
@@ -68,7 +79,7 @@ const Header = () => {
               }}
             >
               <Box >
-              <MenuItem key="Characters" component={Link} to="/" onClick={handleCloseNavMenu}>
+              <MenuItem key="Characters" component={Link} to="/home" onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Characters</Typography>
                 </MenuItem>
               {pages.map((page) => (
@@ -94,7 +105,7 @@ const Header = () => {
           <Box    
           sx={{ flexGrow: 1, justifyContent:'flex-end', display: { xs: 'none', md: 'flex' } }}>
           <Button component={NavLink}           
-                key="characters" to={"/"} 
+                key="characters" to={"/home"} 
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 Characters

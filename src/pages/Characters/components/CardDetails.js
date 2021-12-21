@@ -21,14 +21,15 @@ const CardDetails = () => {
       },[api]);
     return (
         <Grid container
+        spacing={2}
         sx={{mt:'100px'}}>
             <Grid item md={1}>
             
-            <Button sx={{ml:'20px', mb:'10px'}} variant="contained" onClick={() => history('/')}>
+            <Button sx={{ml:'20px', mb:'10px'}} variant="contained" onClick={() => history('/home')}>
                 Go back
             </Button>
             </Grid>
-            <Grid item xs={12} md={11} spacing={2} sx={{display:"flex", justifyContent:"center",
+            <Grid item xs={12} md={11}  sx={{display:"flex", justifyContent:"center",
   alignItems:"center"}} >
             <Card  sx={{ maxWidth: 350, minheight: '550px' }}>
                             <CardMedia
