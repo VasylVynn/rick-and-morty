@@ -23,10 +23,10 @@ const Episodes = () => {
     },[api])
     return (
         <Grid container spacing={2} justifyContent="center" sx={{mt:'60px'}} >
-            <Grid item md={12} sx={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+            <Grid item md={12}  sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection: { xs:'column', md:'row'}  }}>
                 <Search setSearch={setSearch} />
             </Grid>
-            <Grid container item md={11}>
+            <Grid container item md={11} justifyContent="center">
                 <EpisodeCard page="/episodes/" results={results} />
             </Grid>
             <Grid item md={12}>

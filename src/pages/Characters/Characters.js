@@ -35,8 +35,8 @@ function Characters() {
     
     return (
         <div>
-            <Grid container spacing={2} justifyContent="center"sx={{mt:'55px'}}>
-        <Grid item md={12} sx={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+            <Grid container spacing={2} justifyContent="center" sx={{mt:'55px'}}>
+        <Grid item md={12} sx={{display:'flex', justifyContent:'center', alignItems:'center',flexDirection: { xs:'column', md:'row'}}}>
         <Search setSearch={setSearch}  />
         </Grid>
         <Grid item md={3} >
@@ -49,8 +49,7 @@ function Characters() {
         />
         </Grid>
        
-        <Grid  sx={{pr:'10px'}} container item md={9} spacing={2} justifyContent="center"
-  alignItems="center">
+        <Grid  sx={{pr:'10px'}} container item md={9} spacing={2} justifyContent="center" alignItems="center">
           <Cards page="/home" results={results} />
         </Grid>
         

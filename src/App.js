@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./UI/header";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import Episodes from "./pages/Episodes/Episodes";
 import Location from "./pages/Locations/Location";
 import WatchList from "./pages/WatchList/WatchList";
@@ -13,8 +13,9 @@ function App() {
     <Router>
       <div className="App"></div>
       <Header  />
+      
       <Routes>
-      <Route exact path="/">
+      <Route exact path="/" element={<Characters />}>
       </Route> 
         <Route path="/home" element={<Characters />} />
         <Route path="/home/:id" element={<CardDetails />} />

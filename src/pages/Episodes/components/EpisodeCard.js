@@ -12,7 +12,7 @@ function EpisodeCard({results,page}) {
     if (results) {
         display = (results).map(x=>{
             let {id, name, air_date } = x
-            return(<Grid key={id} item md={3}>
+            return(<Grid key={id} item md={3} xs={8} >
                 <Card sx={{ maxWidth: '300px', mb: '10px', height:'160px' }}>
                     <CardContent>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>

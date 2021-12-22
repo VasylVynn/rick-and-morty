@@ -8,7 +8,7 @@ function LocationCard({results}) {
     if (results) {
         display = (results).map(x=>{
             let {id, name, type, dimension } = x
-            return(<Grid key={id} item md={3}>
+            return(<Grid key={id} item md={3} xs={8}>
                 <Card sx={{ maxWidth: '250px', mb: '10px', height:'200px' }}>
                     <CardContent>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>

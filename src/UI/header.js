@@ -33,7 +33,6 @@ const Header = () => {
           component={Link} to = {'/home'}
             variant="h5"
             noWrap
-            //sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, color: '#FFFFFF',  }}
 
             sx={[
               {

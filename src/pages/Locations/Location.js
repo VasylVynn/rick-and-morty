@@ -6,7 +6,7 @@ import Search from '../../UI/Search';
 import FilterType from './components/FilterType';
 import { Box } from '@mui/system';
 import {makeStyles} from '@mui/styles';
-import {  Link, Typography } from '@mui/material'
+import {  Typography } from '@mui/material'
 import FilterDimension from './components/FilterDimension';
 
 
@@ -47,33 +47,36 @@ const classes = useStyles();
 
     return (
         <Grid container spacing={2} justifyContent="center" sx={{mt:'60px'}} >
-            <Grid item md={12} sx={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+            <Grid item md={12} sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection: { xs:'column', md:'row'}}}>
                 <Search setSearch={setSearch} />
             </Grid>
-            <Grid item md={3} >
-                <Box>
+            <Grid item md={3} xs={12} sx={{display:'flex', flexDirection:'column', justifyItems:'center'}}>
+               
                     <Typography sx={{textAlign:'center'}} variant="h6">
                     Filters
                     </Typography>
-                    <Link sx={{ml: '140px'}}  onClick={clear} className={classes.clearButton}>Clear filters </Link>
-                    <FilterType  sx={{ display: 'flex', flexDirection: 'column'}} 
+                    <Box>
+                    <Typography  sx={{textAlign:'center', textDecorationLine:'underline', color:'#1976D2'}}  onClick={clear} className={classes.clearButton}>Clear filters </Typography>
+                    </Box>
+                    <FilterType  
                     updateType={updateType}
                     type={type}
                     setPageNumber={setPageNumber}
                     updateDimension={updateDimension}
                     />
-                    <FilterDimension  sx={{  display: 'flex', flexDirection: 'column'}} 
+                    <FilterDimension  sx={{  display: 'flex', justifyContent:'center', justifyItems:'center'}} 
                     dimension={dimension}
                     updateDimension={updateDimension}
                     setPageNumber={setPageNumber}
                     updateType={updateType}
                     />
-                </Box>
-        
-        </Grid>
-            <Grid container item md={9}>
+                
+            </Grid>
+            
+            <Grid container item md={9} justifyContent="center">
                 <LocationCard results={results} />
             </Grid>
+            
             <Grid item md={12}>
           <MyPagination info={info} setPageNumber={setPageNumber} />
         </Grid>

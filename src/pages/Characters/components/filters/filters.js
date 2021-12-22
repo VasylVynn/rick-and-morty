@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography, Link } from '@mui/material';
+import {Typography } from '@mui/material';
 import Species from './category/Species';
 import Status from './category/Status';
 import Gender from './category/Gender';
@@ -31,7 +31,7 @@ const Filters = ({  updateStatus,  updateGender,  updateSpecies,   setPageNumber
             <Typography sx={{textAlign:'center'}} variant="h6">
             Filters
             </Typography>
-            <Link sx={{ml: '130px'}}  onClick={clear} className={classes.clearButton}>Clear filters </Link>
+            <Typography sx={{textAlign:'center', textDecorationLine:'underline', color:'#1976D2'}}  onClick={clear} className={classes.clearButton}>Clear filters </Typography>
             <Status updateStatus={updateStatus} setPageNumber={setPageNumber} />
             <Gender updateGender={updateGender} setPageNumber={setPageNumber} />
             <Species updateSpecies={updateSpecies} setPageNumber={setPageNumber} />

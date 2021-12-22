@@ -11,7 +11,7 @@ function FilterType({updateType, setPageNumber, type, updateDimension}) {
       setPageNumber(1);    }
       ;
     return (
-      <Box sx={{mt: '10px', maxWidth: '90%', ml: '10px' }}>
+      <Box sx={{mt: '10px', maxWidth: '90%', ml: '15px' }}>
         <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Choose type</InputLabel>
         <Select
