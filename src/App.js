@@ -14,14 +14,11 @@ function App() {
       <Header />
 
       <Routes>
-        <Route exact path="/" element={<Characters />}></Route>
+        <Route path="*" element={<Characters replace to="/home" />} />
         <Route path="/home" element={<Characters />} />
         <Route path="/home/:id" element={<CardDetails />} />
-
         <Route path="/episodes" element={<Episodes />} />
-
         <Route path="/locations" element={<Location />} />
-
         <Route path="/watch-list" element={<WatchList />} />
       </Routes>
     </Router>
