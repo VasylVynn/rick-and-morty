@@ -41,7 +41,6 @@ function FilterType({ updateType, setPageNumber, type, updateDimension }) {
 
   const handleChange = (event) => {
     updateType(event.target.value);
-    updateDimension("");
     setPageNumber(1);
   };
   return (

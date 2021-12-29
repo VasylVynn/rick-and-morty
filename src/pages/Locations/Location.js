@@ -22,7 +22,6 @@ const Location = () => {
     updateType("");
     updateDimension("");
     setPageNumber(1);
-    window.location.reload(false);
   };
 
   const useStyles = makeStyles((theme) => ({

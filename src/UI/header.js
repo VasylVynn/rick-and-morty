@@ -7,11 +7,11 @@ import {
   Typography,
   Menu,
   Container,
-  Button,
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink, Link } from "react-router-dom";
+import "./header.css";
 
 const pages = ["Episodes", "Locations"];
 
@@ -77,31 +77,34 @@ const Header = () => {
               }}
             >
               <Box>
-                <MenuItem
-                  key="Characters"
-                  component={Link}
-                  to="/home"
-                  onClick={handleCloseNavMenu}
-                >
-                  <Typography textAlign="center">Characters</Typography>
-                </MenuItem>
-                {pages.map((page) => (
-                  <MenuItem
-                    key={page}
-                    component={Link}
-                    to={`/${page}`}
+                <MenuItem key="Characters">
+                  <NavLink
+                    className="menuItemMobile"
+                    to="/home"
                     onClick={handleCloseNavMenu}
                   >
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">Characters</Typography>
+                  </NavLink>
+                </MenuItem>
+                {pages.map((page) => (
+                  <MenuItem key={page}>
+                    <NavLink
+                      className="menuItemMobile"
+                      to={`/${page}`}
+                      onClick={handleCloseNavMenu}
+                    >
+                      <Typography textAlign="center">{page}</Typography>
+                    </NavLink>
                   </MenuItem>
                 ))}
-                <MenuItem
-                  key="My watch list"
-                  component={Link}
-                  to={"/watch-list"}
-                  onClick={handleCloseNavMenu}
-                >
-                  <Typography textAlign="center">My watch list</Typography>
+                <MenuItem key="My watch list">
+                  <NavLink
+                    className="menuItemMobile"
+                    to={"/watch-list"}
+                    onClick={handleCloseNavMenu}
+                  >
+                    <Typography textAlign="center">My watch list</Typography>
+                  </NavLink>
                 </MenuItem>
               </Box>
             </Menu>
@@ -116,37 +119,34 @@ const Header = () => {
           </Typography>
           <Box
             sx={{
+              marginLeft: "45%",
+              maxWidth: "600px",
               flexGrow: 1,
-              justifyContent: "flex-end",
+              justifyContent: "space-around",
               display: { xs: "none", md: "flex" },
             }}
           >
-            <Button
-              component={NavLink}
-              key="characters"
-              to={"/home"}
-              sx={{ my: 2, color: "white", display: "block" }}
-            >
+            <NavLink key="characters" to={"/home"} className="menuItemDesktop">
               Characters
-            </Button>
+            </NavLink>
             {pages.map((page, pages, index) => (
-              <Button
-                component={NavLink}
+              <NavLink
+                className="menuItemDesktop"
                 key={pages}
                 to={`/${page}`}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
-              </Button>
+              </NavLink>
             ))}
-            <Button
-              component={NavLink}
+            <NavLink
+              className="menuItemDesktop"
               key="My watch list"
               to={"/watch-list"}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               My watch list
-            </Button>
+            </NavLink>
           </Box>
         </Toolbar>
       </Container>

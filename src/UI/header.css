@@ -1,0 +1,34 @@
+.menuItemDesktop {
+  color: #ffffff;
+  height: fit-content;
+  align-self: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menuItemDesktop:hover {
+  color: #cccaca;
+}
+
+.active {
+  background-color: #1166bb;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.menuItemMobile {
+  color: #000000;
+  height: fit-content;
+  align-self: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.menuItemMobile.active {
+  color: #1976d2;
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0px;
+}

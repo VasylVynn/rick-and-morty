@@ -20,7 +20,6 @@ function FilterDimension({
 
   const handleChange = (event) => {
     updateDimension(event.target.value);
-    updateType("");
     setPageNumber(1);
   };
   return (
