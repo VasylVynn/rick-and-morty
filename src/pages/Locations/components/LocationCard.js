@@ -5,8 +5,7 @@ function LocationCard({ results }) {
   let display;
 
   if (results) {
-    display = results.map((x) => {
-      let { id, name, type, dimension } = x;
+    display = results.map(({ id, name, type, dimension }) => {
       return (
         <Grid key={id} item md={3} xs={8}>
           <Card sx={{ maxWidth: "250px", mb: "10px", height: "200px" }}>

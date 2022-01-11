@@ -14,9 +14,7 @@ function Cards({ results, page }) {
   let display;
 
   if (results) {
-    display = results.map((x) => {
-      let { id, name, image, location, species } = x;
-
+    display = results.map(({ id, name, image, location, species }) => {
       return (
         <Grid key={id} item md={4}>
           <Card sx={{ maxWidth: 300, height: "520px" }}>

@@ -5,8 +5,7 @@ function EpisodeCard({ results, page }) {
   let display;
 
   if (results) {
-    display = results.map((x) => {
-      let { id, name, air_date } = x;
+    display = results.map(({id, name, air_date}) => {
       return (
         <Grid key={id} item md={3} xs={8}>
           <Card sx={{ maxWidth: "300px", mb: "10px", height: "160px" }}>
