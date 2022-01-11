@@ -10,13 +10,13 @@ import { Typography } from "@mui/material";
 import FilterDimension from "./components/FilterDimension";
 
 const Location = () => {
-  let [pageNumber, setPageNumber] = useState(1);
-  let [search, setSearch] = useState("");
-  let [type, updateType] = useState("");
-  let [dimension, updateDimension] = useState("");
-  let [fetchedData, updateFetchedData] = useState([]);
-  let api = `https://rickandmortyapi.com/api/location/?page=${pageNumber}&name=${search}&type=${type}&dimension=${dimension}`;
-  let { info, results } = fetchedData;
+  const [pageNumber, setPageNumber] = useState(1);
+  const [search, setSearch] = useState("");
+  const [type, updateType] = useState("");
+  const [dimension, updateDimension] = useState("");
+  const [fetchedData, updateFetchedData] = useState([]);
+  const api = `https://rickandmortyapi.com/api/location/?page=${pageNumber}&name=${search}&type=${type}&dimension=${dimension}`;
+  const { info, results } = fetchedData;
 
   let clear = () => {
     updateType("");

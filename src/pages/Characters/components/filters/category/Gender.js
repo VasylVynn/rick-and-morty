@@ -2,7 +2,7 @@ import React from "react";
 import FilterBTN from "../filterBTN";
 
 const Gender = ({ updateGender, setPageNumber }) => {
-  let genders = ["Female", "Male", "Genderless", "Unknown"];
+  const genders = ["Female", "Male", "Genderless", "Unknown"];
   return (
     <div className="accordion-item">
       <h2 className="accordion-header" id="headingOne">

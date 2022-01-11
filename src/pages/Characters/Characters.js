@@ -6,14 +6,14 @@ import MyPagination from "../../UI/Pagination";
 import Search from "../../UI/Search";
 
 function Characters() {
-  let [pageNumber, setPageNumber] = useState(1);
-  let [search, setSearch] = useState("");
-  let [status, updateStatus] = useState("");
-  let [gender, updateGender] = useState("");
-  let [species, updateSpecies] = useState("");
-  let [fetchedData, updateFetchedData] = useState([]);
-  let { info, results } = fetchedData;
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
+  const [pageNumber, setPageNumber] = useState(1);
+  const [search, setSearch] = useState("");
+  const [status, updateStatus] = useState("");
+  const [gender, updateGender] = useState("");
+  const [species, updateSpecies] = useState("");
+  const [fetchedData, updateFetchedData] = useState([]);
+  const { info, results } = fetchedData;
+  const api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
   useEffect(() => {
     (async function () {

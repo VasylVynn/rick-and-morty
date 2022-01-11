@@ -5,9 +5,8 @@ function FilterDimension({
   updateDimension,
   setPageNumber,
   dimension,
-  updateType,
 }) {
-  let dimensionArray = [
+  const dimensionArray = [
     "Dimension C-137",
     "Replacement Dimension",
     "Cronenberg Dimension",

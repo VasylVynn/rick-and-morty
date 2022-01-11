@@ -10,12 +10,12 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 const CardDetails = () => {
-  let history = useNavigate();
-  let { id } = useParams();
-  let [fetchedData, updateFetchedData] = useState([]);
+  const history = useNavigate();
+  const { id } = useParams();
+  const [fetchedData, updateFetchedData] = useState([]);
   let { name, image, origin, location, gender, species, status } = fetchedData;
 
-  let api = `https://rickandmortyapi.com/api/character/${id}`;
+  const api = `https://rickandmortyapi.com/api/character/${id}`;
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());

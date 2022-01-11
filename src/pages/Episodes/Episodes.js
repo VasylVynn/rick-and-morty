@@ -5,11 +5,11 @@ import MyPagination from "../../UI/Pagination";
 import Search from "../../UI/Search";
 
 const Episodes = () => {
-  let [pageNumber, setPageNumber] = useState(1);
-  let [search, setSearch] = useState("");
-  let [fetchedData, updateFetchedData] = useState([]);
-  let api = `https://rickandmortyapi.com/api/episode/?page=${pageNumber}&name=${search}`;
-  let { info, results } = fetchedData;
+  const [pageNumber, setPageNumber] = useState(1);
+  const [search, setSearch] = useState("");
+  const [fetchedData, updateFetchedData] = useState([]);
+  const api = `https://rickandmortyapi.com/api/episode/?page=${pageNumber}&name=${search}`;
+  const { info, results } = fetchedData;
 
   useEffect(() => {
     (async function () {
