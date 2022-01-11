@@ -27,7 +27,7 @@ const Gender = ({ updateGender, setPageNumber }) => {
         <div className="accordion-body d-flex flex-wrap gap-3">
           {genders.map((item, index) => (
             <FilterBTN
-              key={index}
+              key={item.toString()} 
               index={index}
               name="genders"
               task={updateGender}

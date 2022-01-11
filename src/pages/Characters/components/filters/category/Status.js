@@ -27,7 +27,7 @@ const Status = ({ updateStatus, setPageNumber }) => {
         <div className="accordion-body d-flex flex-wrap gap-3">
           {status.map((item, index) => (
             <FilterBTN
-              key={index}
+              key={item.toString()} 
               index={index}
               name="status"
               task={updateStatus}
