@@ -10,7 +10,6 @@ import Characters from "./pages/Characters/Characters";
 function App() {
   return (
     <Router>
-      <div className="App"></div>
       <Header />
 
       <Routes>
